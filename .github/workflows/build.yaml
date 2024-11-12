@@ -19,6 +19,11 @@ jobs:
         with:
           version: '0.32.2'
 
+      - name: Install Arduino AVR Core
+        run: |
+          arduino-cli core update-index
+          arduino-cli core install arduino:avr
+
       - name: Compile Arduino Sketch
         run: |
           arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino
