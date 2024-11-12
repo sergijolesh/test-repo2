@@ -41,3 +41,6 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore ./Client/Client
+
+      - name: Build C# Client
+        run: dotnet build Client/Client --configuration Release
