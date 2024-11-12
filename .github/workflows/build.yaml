@@ -21,4 +21,4 @@ jobs:
 
       - name: Compile Arduino Sketch
         run: |
-          arduino-cli compile --fqbn arduino:avr:uno ../../Server/Server.ino
+          arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino
