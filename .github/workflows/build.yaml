@@ -7,7 +7,7 @@ on:
   pull_request:
 
 jobs:
-  build:
+  arduino-build:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +27,9 @@ jobs:
       - name: Compile Arduino Sketch
         run: |
           arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino
+
+  csharp-build-and-test:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
