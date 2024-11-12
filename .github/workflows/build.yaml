@@ -18,3 +18,7 @@ jobs:
         uses: arduino/setup-arduino-cli@v1
         with:
           version: '0.32.2'
+
+      - name: Compile Arduino Sketch
+      run: |
+        arduino-cli compile --fqbn arduino:avr:uno arduino/serial_server
