@@ -44,3 +44,6 @@ jobs:
 
       - name: Build C# Client
         run: dotnet build Client/Client --configuration Release
+
+      - name: Run Serial Communication Test
+        run: dotnet test Client/Client/Tests --configuration Release
