@@ -5,6 +5,7 @@ on:
     branches:
       - main
   pull_request:
+      - main
 
 jobs:
   arduino-build:
@@ -14,7 +15,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Arduino CLI
+      - name: Setup Arduino CLI
         uses: arduino/setup-arduino-cli@v2
         with:
           version: '0.32.2'
@@ -28,7 +29,7 @@ jobs:
         run: |
           arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino
 
-  csharp-build-and-test:
+  csharp-build:
     runs-on: windows-latest
     steps:
       - name: Checkout repository
