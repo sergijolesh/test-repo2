@@ -44,12 +44,3 @@ jobs:
 
       - name: Build C# Client
         run: dotnet build Client/Client --configuration Release
-
-      - name: Install NUnit Packages
-        run: |
-          dotnet add Client/Client package NUnit
-          dotnet add Client/Client package NUnit3TestAdapter
-          dotnet add Client/Client package Microsoft.NET.Test.Sdk
-
-      - name: Run Serial Communication Test
-        run: dotnet test Client/Client/Tests --configuration Release

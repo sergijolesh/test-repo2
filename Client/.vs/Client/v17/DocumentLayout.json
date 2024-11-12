@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\serhi\\Desktop\\Client\\",
+  "WorkspaceRootPath": "C:\\Users\\serhi\\Desktop\\test-repo2\\Client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{984DC85F-D365-43CE-8035-0CA20240A934}|Client\\Client.csproj|c:\\users\\serhi\\desktop\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{984DC85F-D365-43CE-8035-0CA20240A934}|Client\\Client.csproj|c:\\users\\serhi\\desktop\\test-repo2\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{984DC85F-D365-43CE-8035-0CA20240A934}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\serhi\\Desktop\\Client\\Client\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\serhi\\Desktop\\test-repo2\\Client\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
-              "ToolTip": "C:\\Users\\serhi\\Desktop\\Client\\Client\\Program.cs",
+              "ToolTip": "C:\\Users\\serhi\\Desktop\\test-repo2\\Client\\Client\\Program.cs",
               "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AQIAAAAAAABgZmZmZmYkwAoAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T22:15:26.007Z",
               "EditorCaption": ""
