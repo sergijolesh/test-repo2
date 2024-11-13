@@ -27,8 +27,4 @@ jobs:
       - name: Build Client project
         run: dotnet build ./Client/Client --configuration Debug --output ./CI/build
 
-      - name: Create build artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: binaries
-          path: ./CI/build
+
