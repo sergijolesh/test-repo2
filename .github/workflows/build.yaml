@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -28,7 +28,8 @@ jobs:
 
       - name: Compile Arduino Sketch
         run: |
-          arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino
+          mkdir -p ./CI/build
+          arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino --output-dir ./CI/build
 
   csharp-build:
     runs-on: windows-latest
@@ -45,4 +46,6 @@ jobs:
         run: dotnet restore ./Client/Client
 
       - name: Build C# Client
-        run: dotnet build Client/Client --configuration Release
+        run: |
+          mkdir -p ./CI/build
+          dotnet build ./Client/Client --configuration Release --output ./CI/build
