@@ -27,6 +27,9 @@ jobs:
       - name: Build Client project
         run: dotnet build ./Client/Client --configuration Debug --output ./CI/build/client
 
+      - name: Run Client unit tests
+        run: dotnet test ./Client/ClientTests --configuration Debug
+
       - name: Create client build artifact
         uses: actions/upload-artifact@v3
         with:
