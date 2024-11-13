@@ -25,4 +25,4 @@ jobs:
         run: dotnet restore ./Client/Client
 
       - name: Build Client project
-        run: dotnet build ./Client/Client.csproj --configuration Debug --output ./CI/build
+        run: dotnet build ./Client/Client --configuration Debug --output ./CI/build
