@@ -49,7 +49,7 @@ jobs:
           arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino --output-dir ./CI/build/server
 
       - name: Create server build artifact
-          uses: actions/upload-artifact@v3
-          with:
-            name: server-binaries
-            path: ./CI/build/server
+        uses: actions/upload-artifact@v3
+        with:
+          name: server-binaries
+          path: ./CI/build/server
