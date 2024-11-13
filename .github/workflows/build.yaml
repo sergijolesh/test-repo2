@@ -25,13 +25,13 @@ jobs:
         run: dotnet restore ./Client/Client
 
       - name: Build Client project
-        run: dotnet build ./Client/Client --configuration Debug --output ./CI/build
+        run: dotnet build ./Client/Client --configuration Debug --output ./CI/build/client
 
-      - name: Create build artifact
+      - name: Create client build artifact
         uses: actions/upload-artifact@v3
         with:
           name: client-binaries
-          path: ./CI/build
+          path: ./CI/build/client
 
       - name: Setup Arduino CLI
         uses: arduino/setup-arduino-cli@v2
@@ -46,4 +46,10 @@ jobs:
       - name: Compile Arduino Sketch
         run: |
           mkdir -p ./CI/build
-          arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino --output-dir ./CI/build
+          arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino --output-dir ./CI/build/server
+
+      - name: Create server build artifact
+          uses: actions/upload-artifact@v3
+          with:
+            name: server-binaries
+            path: ./CI/build/server
