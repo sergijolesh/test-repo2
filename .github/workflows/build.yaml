@@ -48,12 +48,4 @@ jobs:
       - name: Build C# Client
         run: |
           mkdir -p ./CI/build
-          dotnet build ./Client/Client --configuration Release --output ./CI/build
-
-      - name: Upload binaries and test reports
-        uses: actions/upload-artifact@v3
-        with:
-          name: binaries-and-reports
-          path: |
-          ./CI/build/**
-         
+          dotnet build ./Client/Client --configuration Release --output ./CI/build         
