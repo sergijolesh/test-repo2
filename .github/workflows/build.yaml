@@ -24,4 +24,5 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore ./Client/Client
 
-      
+      - name: Build Client project
+        run: dotnet build ./Client/Client.csproj --configuration Debug --output ./CI/build
