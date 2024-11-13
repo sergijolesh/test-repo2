@@ -28,7 +28,7 @@ jobs:
         run: dotnet build ./Client/Client --configuration Debug --output ./CI/build/client
 
       - name: Create client build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: client-binaries
           path: ./CI/build/client
@@ -47,13 +47,13 @@ jobs:
         run: arduino-cli compile --fqbn arduino:avr:uno ./Server/Server.ino --output-dir ./CI/build/server
 
       - name: Create server build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: server-binaries
           path: ./CI/build/server
 
       - name: Upload test reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: test-reports/results.xml
