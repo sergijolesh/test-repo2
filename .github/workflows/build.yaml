@@ -30,5 +30,6 @@ jobs:
       - name: Create build artifact
         uses: actions/upload-artifact@v3
         with:
-          name: binaries
+          name: client-binaries
           path: ./CI/build
+
